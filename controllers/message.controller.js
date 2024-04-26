@@ -1,7 +1,7 @@
 import Conversation from "../models/conversation.model.js";
 import Message from "../models/message.model.js";
 
-
+// handle the message request
 export const sendMessage = async (req, res) => {
 	try {
 		const { message } = req.body;
@@ -40,6 +40,8 @@ export const sendMessage = async (req, res) => {
 		res.status(500).json({ error: "Internal server error" });
 	}
 };
+
+// handle the get request 
 
 export const getMessages = async (req, res) => {
 	try {
